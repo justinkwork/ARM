@@ -14,7 +14,8 @@
             "allowedValues": [
                 "westus2",
                 "eastus2",
-                "eastus2euap"
+                "eastus2euap",
+                "centralus"
             ],
             "metadata": {
                 "description": "Specifies the location in which to create the Data Collection Endpoint."
