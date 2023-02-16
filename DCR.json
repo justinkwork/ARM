@@ -36,18 +36,34 @@
             "properties": {
                 "dataCollectionEndpointId": "[parameters('endpointResourceId')]",
                 "streamDeclarations": {
-                    "Custom-MyTableRawData": {
+                    "Custom-TABLENAME": {
                         "columns": [
-                            {
-                                "name": "Time",
+                             {
+                                "name": "TimeGenerated",
                                 "type": "datetime"
                             },
                             {
-                                "name": "Computer",
+                                "name": "TimeStamp",
+                                "type": "datetime"
+                            },
+                            {
+                                "name": "ServerName",
                                 "type": "string"
                             },
                             {
-                                "name": "AdditionalContext",
+                                "name": "MonitorValue",
+                                "type": "int"
+                            },
+                            {
+                                "name": "Message",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LogLevel",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LogType",
                                 "type": "string"
                             }
                         ]
@@ -64,13 +80,12 @@
                 "dataFlows": [
                     {
                         "streams": [
-                            "Custom-MyTableRawData"
+                            "Custom-TABLENAME"
                         ],
                         "destinations": [
                             "clv2ws1"
                         ],
-                        "transformKql": "source | extend jsonContext = parse_json(AdditionalContext) | project TimeGenerated = Time, Computer, AdditionalContext = jsonContext, CounterName=tostring(jsonContext.CounterName), CounterValue=jsonContext.CounterValue",
-                        "outputStream": "Custom-MyTable_CL"
+                        "outputStream": "Custom-TABLENAME_CL"
                     }
                 ]
             }
