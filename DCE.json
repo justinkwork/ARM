@@ -12,6 +12,7 @@
             "type": "string",
             "defaultValue": "westus2",
             "allowedValues": [
+                "uksouth",
                 "westus2",
                 "eastus2",
                 "eastus2euap",
