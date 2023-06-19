@@ -13,6 +13,7 @@
             "defaultValue": "westus2",
             "allowedValues": [
                 "uksouth",
+                "westus",
                 "westus2",
                 "eastus2",
                 "eastus2euap",
