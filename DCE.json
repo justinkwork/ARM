@@ -19,7 +19,8 @@
                 "eastus2",
                 "eastus2euap",
                 "centralus",
-                "southcentralus"
+                "southcentralus",
+                "germanywestcentral"
             ],
             "metadata": {
                 "description": "Specifies the location in which to create the Data Collection Endpoint."
